@@ -11,7 +11,8 @@ CREATE TABLE companies (
   buildingId int(11) unsigned NOT NULL,
   name varchar(255) NOT NULL,
   FOREIGN KEY (buildingId) REFERENCES buildings(id) ON DELETE CASCADE,
-  FULLTEXT(name)
+  FULLTEXT(name),
+  INDEX(buildingId)
 ) ENGINE=InnoDB;
 
 CREATE TABLE phones (
@@ -33,7 +34,8 @@ CREATE TABLE companyCategories (
   companyId int(11) unsigned NOT NULL,
   categoryId int(11) unsigned NOT NULL,
   FOREIGN KEY (companyId) REFERENCES companies(id) ON DELETE CASCADE,
-  FOREIGN KEY (categoryId) REFERENCES categories(id) ON DELETE CASCADE
+  FOREIGN KEY (categoryId) REFERENCES categories(id) ON DELETE CASCADE,
+  INDEX(companyId, categoryId)
 ) ENGINE=InnoDB;
 
 INSERT buildings SET address='Красный Проспект 1', coordinate=POINT(55.001, 82.001);
