@@ -4,7 +4,7 @@
 
 ## Выдача всех организаций находящихся в конкретном здании
 
-    GET /companiesByBuildId?buildId=1
+    GET /index.php?controller=companiesByBuilding&buildId=1
 
 Пример ответа:
 
@@ -12,7 +12,7 @@
         {
             "id":"1",
             "buildingId":"1",
-            "name":"Polar Express",
+            "name":"Planet Express",
             "distance":"0"
         },
         {
@@ -20,23 +20,17 @@
             "buildingId":"1",
             "name":"\u0420\u0430\u0437\u043d\u043e\u0435",
             "distance":"0"
-        },
-        {
-            "id":"3",
-            "buildingId":"2",
-            "name":"\u041e\u0434\u0438\u043d\u0430\u043a\u043e\u0432\u043e\u0435",
-            "distance":"112.26599367793361"
         }
     ]
 
 ## Список всех организаций, которые относятся к указанной рубрике
 
-    GET /companiesByCategoryId?categoryId=1
+    GET /index.php?controller=companiesByCategory&categoryId=1
 
 Формат ответа такой-же как у предыдущего метода.
 
 ## Список организаций, которые находятся в заданном радиусе относительно указанной точки на карте
 
-    GET /companiesByCoordinate&latitude=55.001&longitude=82.001&distance=200
+    GET /index.php?controller=companiesByCoordinate&latitude=55.001&longitude=82.001&distance=200
 
 `distance` указывается в метрах. Формат ответа такой-же как у предыдущего метода.

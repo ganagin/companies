@@ -53,7 +53,7 @@ INSERT categories SET parentId=6, name='Запчасти для подвески
 INSERT categories SET parentId=6, name='Шины/Диски';
 INSERT categories SET parentId=NULL, name='Спорт';
 
-INSERT companies SET buildingId=1, name='Polar Express';
+INSERT companies SET buildingId=1, name='Planet Express';
 INSERT companies SET buildingId=1, name='Разное';
 INSERT companies SET buildingId=2, name='Одинаковое';
 INSERT companies SET buildingId=4, name='Компания';
