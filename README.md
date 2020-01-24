@@ -12,14 +12,12 @@
         {
             "id":"1",
             "buildingId":"1",
-            "name":"Planet Express",
-            "distance":"0"
+            "name":"Planet Express"
         },
         {
             "id":"2",
             "buildingId":"1",
-            "name":"\u0420\u0430\u0437\u043d\u043e\u0435",
-            "distance":"0"
+            "name":"\u0420\u0430\u0437\u043d\u043e\u0435"
         }
     ]
 
@@ -33,4 +31,27 @@
 
     GET /index.php?controller=companiesByCoordinate&latitude=55.001&longitude=82.001&distance=200
 
-`distance` указывается в метрах. Формат ответа такой-же как у предыдущего метода.
+`distance` указывается в метрах.
+
+Пример ответа:
+
+    [
+        {
+            "id":"1",
+            "buildingId":"1",
+            "name":"Planet Express",
+            "distance":"0"
+        },
+        {
+            "id":"2",
+            "buildingId":"1",
+            "name":"\u0420\u0430\u0437\u043d\u043e\u0435",
+            "distance":"0"
+        },
+        {
+            "id":"3",
+            "buildingId":"2",
+            "name":"\u041e\u0434\u0438\u043d\u0430\u043a\u043e\u0432\u043e\u0435",
+            "distance":"112.26599367793361"
+        }
+    ]
