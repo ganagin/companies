@@ -27,6 +27,7 @@ class Db {
         try {
             if (!static::$pdo) {
                 static::$pdo = new PDO(static::$dsn, static::$user, static::$password);
+                static::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
