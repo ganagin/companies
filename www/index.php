@@ -1,7 +1,7 @@
 <?php
 
 spl_autoload_register(function($model) {
-    require "models/{$model}.php";
+    require "../models/{$model}.php";
 });
 
 error_reporting(E_ALL);
