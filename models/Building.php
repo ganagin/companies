@@ -6,6 +6,9 @@ class Building {
     public $address;
     public $coordinate;
 
+    /**
+     * @return array
+     */
     public static function getAll(): array
     {
         $db = Db::getPDO();
