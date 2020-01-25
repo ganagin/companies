@@ -6,6 +6,10 @@ class Company {
     public $buildingId;
     public $name;
 
+    /**
+     * @param int $buildingId
+     * @return array
+     */
     public static function getByBuildingId(int $buildingId): array
     {
         $db = Db::getPDO();
@@ -19,6 +23,10 @@ class Company {
         return $query->fetchAll(PDO::FETCH_CLASS, __CLASS__);
     }
 
+    /**
+     * @param int $categoryId
+     * @return array
+     */
     public static function getByCategoryId(int $categoryId): array
     {
         $db = Db::getPDO();
@@ -33,6 +41,12 @@ class Company {
         return $query->fetchAll(PDO::FETCH_CLASS, __CLASS__);
     }
 
+    /**
+     * @param float $latitude
+     * @param float $longitude
+     * @param int $distance
+     * @return array
+     */
     public static function getByCoordinate(float $latitude, float $longitude, int $distance): array
     {
         $db = Db::getPDO();
