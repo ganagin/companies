@@ -82,7 +82,7 @@
 
 ## Выдача информации об организациях по их идентификаторам
 
-    GET /http://localhost/companies/www/index.php?controller=company&id=1
+    GET /index.php?controller=company&id=1
 
 Пример ответа:
 
