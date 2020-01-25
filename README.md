@@ -55,3 +55,39 @@
             "distance":"112.26599367793361"
         }
     ]
+
+## Список зданий
+
+    GET /index.php?controller=buildings
+
+Пример ответа:
+
+    [
+        {
+            "id":"1",
+            "address":"\u041a\u0440\u0430\u0441\u043d\u044b\u0439 \u041f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 1",
+            "coordinate":"55.001,82.001"
+        },
+        {
+            "id":"2",
+            "address":"\u041a\u0440\u0430\u0441\u043d\u044b\u0439 \u041f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 2",
+            "coordinate":"55.002,82.002"
+        },
+        {
+            "id":"3",
+            "address":"\u041a\u0440\u0430\u0441\u043d\u044b\u0439 \u041f\u0440\u043e\u0441\u043f\u0435\u043a\u0442 3",
+            "coordinate":"55.003,82.003"
+        }
+    ]
+
+## Выдача информации об организациях по их идентификаторам
+
+    GET /http://localhost/companies/www/index.php?controller=company&id=1
+
+Пример ответа:
+
+    {
+        "id":"1",
+        "buildingId":"1",
+        "name":"Planet Express"
+    }

@@ -65,4 +65,20 @@ class Company {
         return $query->fetchAll(PDO::FETCH_CLASS, __CLASS__);
     }
 
+    /**
+     * @param int $id
+     * @return Company|null
+     */
+    public static function get(int $id): ?self
+    {
+        $db = Db::getPDO();
+        $query = $db->prepare('
+            SELECT *
+            FROM companies
+            WHERE id = ?;
+        ');
+        $query->execute([$id]);
+        $company = $query->fetchObject(__CLASS__);
+        return $company ? $company : null;
+    }
 }
