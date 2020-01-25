@@ -2,6 +2,11 @@
 
 class Errors {
 
+    /**
+     * Errors constructor.
+     *
+     * @param Exception $e
+     */
     public function __construct(Exception $e)
     {
         $error = $e->getMessage();

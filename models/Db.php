@@ -7,6 +7,11 @@ class Db {
     private static $password;
     private static $pdo;
 
+    /**
+     * @param string $dsn
+     * @param string $user
+     * @param string $password
+     */
     public static function config(string $dsn, string $user, string $password)
     {
         static::$dsn = $dsn;
@@ -14,6 +19,9 @@ class Db {
         static::$password = $password;
     }
 
+    /**
+     * @return PDO
+     */
     public static function getPDO(): PDO
     {
         try {
