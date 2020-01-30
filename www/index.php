@@ -15,9 +15,10 @@ require '../config.php';
 
 try {
 
+    header('Content-Type: application/json');
+
     $controller = '../controllers/' . basename($_GET['controller']) . '.php';
     if (is_file($controller)) {
-        header('Content-Type: application/json');
         require $controller;
     } else {
         http_response_code(404);
